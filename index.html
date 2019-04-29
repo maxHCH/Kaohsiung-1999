@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,55 @@
     <title>1999 查詢</title>
     <link rel="stylesheet" href="./scss/all.css">
 </head>
+
 <body>
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand text-success ">高雄一九九九</a>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2 searchInput" type="search" placeholder="輸入關鍵字" aria-label="Search">
+                    <button class="btn btn-success my-2 my-sm-0 searchBtn" type="button">搜尋</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container py-5 ">
+            <div class="row">
+                <div class="col-lg-3">
+                    <select class="form-control selZone">
+                    </select>
+                    <select class="form-control selUnit mt-3">
+                    </select>
+                </div>
+                <div class="col-lg-9 ">
+                    <div class="row showContent "></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-light py-3 text-center text-secondary">
+        <p>maxhyun 2019 製作</p> 
+    </footer>
+
+
+
+
+
+
+
+
     <script src="./js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
