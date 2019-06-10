@@ -110,6 +110,7 @@ function showZone() {
         `
     }
     content.innerHTML = contentStr;
+
 }
 
 
