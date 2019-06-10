@@ -4,6 +4,7 @@ const selUnit = document.querySelector('.selUnit');
 const searchBtn = document.querySelector('.searchBtn');
 const searchInput = document.querySelector('.searchInput');
 const xhr = new XMLHttpRequest();
+
 xhr.open('get','https://api.kcg.gov.tw/api/service/Get/12d512c7-479e-458a-b437-b225e98653c5');
 xhr.send();
 xhr.onload = function set(){
@@ -11,7 +12,6 @@ xhr.onload = function set(){
     let data = ogdata.data;
     const kaoZone = [];
     const kaoUnit = [];
-    const str = '';
     for( let i=0 ; i<data.length ; i++){
         kaoZone.push(data[i].ZipName_);
         kaoUnit.push(data[i].UnitName_);
@@ -26,8 +26,8 @@ xhr.onload = function set(){
         kaoUnit.forEach(function(value) {
             if (name.indexOf(value) == -1) {
                 name.push(value);
-                }
-            });
+            }
+        });
         let opZone = '<option value="請選擇">請選擇</option>';
         let opUnit = '<option value="請選擇">請選擇</option>';
         for (let i=0;i<area.length;i++){
@@ -36,9 +36,9 @@ xhr.onload = function set(){
         for (let i=0;i<name.length;i++){
             opUnit += `<option value="${name[i]}">${name[i]}</option>`;
         }
-    selZone.innerHTML=opZone;
-    selUnit.innerHTML=opUnit;
-    
+    selZone.innerHTML = opZone;
+    selUnit.innerHTML = opUnit;
+    showZone();
 }
 function showZone() {
     let ogdata = JSON.parse(xhr.responseText);
